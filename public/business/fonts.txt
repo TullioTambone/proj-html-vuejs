@@ -1,2 +1,17 @@
 Gilroy Semi Bold - titoli
 Shine Pro Regular - testo
+
+
+
+<script>
+ export default{
+    name:'NavBarComp'
+ }
+</script>
+
+<template>
+
+</template>
+
+<style lang="scss" scoped>
+</style>
