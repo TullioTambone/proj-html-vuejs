@@ -1,9 +1,18 @@
 <script >
+import {store} from './store'
 
+export default{
+  name:'App',
+  data(){
+    return{
+      store
+    }
+  }
+}
 </script>
 
 <template>
-  <h1>Ciao mondo</h1>
+
 </template>
 
 <style lang="scss">
