@@ -1,13 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+//import fontsource
+import '@fontsource/poppins'
 //importare bootstrap js
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 
-/* import the fontawesome core */
+/* import fontawesome*/
 import { library } from '@fortawesome/fontawesome-svg-core'
-
-/* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
