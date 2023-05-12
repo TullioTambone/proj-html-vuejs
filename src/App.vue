@@ -1,6 +1,7 @@
 <script >
 import {store} from './store'
 import NavBarComp from './components/NavBarComp.vue';
+import MainComp from './components/MainComp.vue';
 
 export default{
   name: "App",
@@ -10,7 +11,8 @@ export default{
       };
   },
   components: { 
-    NavBarComp 
+    NavBarComp,
+    MainComp,
   }
 }
 </script>
@@ -19,6 +21,9 @@ export default{
   <header>
     <NavBarComp/>
   </header>
+
+  <MainComp/>
+
 </template>
 
 <style lang="scss">

@@ -78,7 +78,6 @@ import {store} from '../store'
             @include center;
             li{
                 font-size: 15px;
-                list-style-type: none;
                 margin: 0 0.8rem;
             }
         }
