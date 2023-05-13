@@ -100,7 +100,7 @@ section{
             }
             &::before{
                 content: '';
-                transition: all 0.5s linear;
+                transition: all 0.3s linear;
                 background-color: $purple;
                 position: absolute;
                 bottom:0;

@@ -32,7 +32,7 @@
                 {
                     icon: 'fa-person-rays',
                     title: 'Self Development',
-                    paragrafh: "Business Coaching often keep yoour focus and develop you both in a professiona and personal way."
+                    paragrafh: "Business Coaching often keep your focus and develope you both in a professional and personal way."
                 }
             ]
         }
@@ -42,7 +42,7 @@
 
 <template>
     <section class="container-fluid">
-        <div id="my-container" class="text-center">
+        <div id="my-container" class="text-center mt-">
             <div class="static-text">
                 <h6>Let's Dream Bug Together</h6>
                 <span>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new age of digitalization</span>
@@ -73,8 +73,13 @@ img{
 }
 .container-fluid{
     height: 100vh;
+    @include center;
     #my-container{
-        margin: 5rem auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 80%;
         .static-text{
             margin: 0 auto;
@@ -122,14 +127,14 @@ img{
                 width: 180px;
                 position: relative;
                 overflow: hidden;
-                transition: 0.8s ease;
+                transition: 0.5s ease;
                 z-index: 1;
                 &:hover{
                 color: white;
                 }
                 &::before{
                     content: '';
-                    transition: all 0.5s linear;
+                    transition: all 0.3s linear;
                     background-color: $purple;
                     position: absolute;
                     top:0;
@@ -155,14 +160,14 @@ img{
                 background-color: $giungla;
                 position: relative;
                 overflow: hidden;
-                transition: 0.8s ease;
+                transition: 0.5s ease;
                 z-index: 1;
                 &:hover{
                 color: white;
                 }
                 &::before{
                     content: '';
-                    transition: all 0.5s linear;
+                    transition: all 0.3s linear;
                     background-color: $purple;
                     position: absolute;
                     bottom:0;
@@ -175,9 +180,6 @@ img{
                 &:hover::before{
                     height: 170%;
                 }
-            }
-            .my-btn{
-                
             }
         }
     }

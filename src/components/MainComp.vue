@@ -45,7 +45,7 @@ import ThirdMainSection from './ThirdMainSection.vue';
 
         <FirstMainSection/>
         <SecondMainSection/>
-        <ThirdMainsection/>
+        <ThirdMainSection/>
     </main>
 </template>
 
