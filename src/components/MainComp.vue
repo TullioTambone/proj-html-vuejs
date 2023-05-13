@@ -1,12 +1,14 @@
 <script>
 import FirstMainSection from './FirstMainSection.vue'
 import SecondMainSection from './SecondMainSection.vue';
+import ThirdMainSection from './ThirdMainSection.vue';
  export default{
     name:'MainComp',
     components:{
-        FirstMainSection,
-        SecondMainSection,
-    }
+    FirstMainSection,
+    SecondMainSection,
+    ThirdMainSection,
+}
  }
 </script>
 
@@ -43,6 +45,7 @@ import SecondMainSection from './SecondMainSection.vue';
 
         <FirstMainSection/>
         <SecondMainSection/>
+        <ThirdMainsection/>
     </main>
 </template>
 
