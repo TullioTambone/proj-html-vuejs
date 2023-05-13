@@ -69,6 +69,9 @@ import {store} from '../store'
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: $white;
+    position: relative;
+    z-index: 99;
     .logo{
         @include center
     }

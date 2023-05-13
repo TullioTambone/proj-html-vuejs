@@ -1,9 +1,11 @@
 <script>
 import FirstMainSection from './FirstMainSection.vue'
+import SecondMainSection from './SecondMainSection.vue';
  export default{
     name:'MainComp',
     components:{
         FirstMainSection,
+        SecondMainSection,
     }
  }
 </script>
@@ -40,6 +42,7 @@ import FirstMainSection from './FirstMainSection.vue'
         </div>
 
         <FirstMainSection/>
+        <SecondMainSection/>
     </main>
 </template>
 
@@ -47,6 +50,7 @@ import FirstMainSection from './FirstMainSection.vue'
 @import '../style/main.scss';
 main{
     #side-menu{
+        z-index: 99999999;
         position: fixed;
         top: 5rem;
         right: 0px;
