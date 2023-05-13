@@ -1,23 +1,38 @@
 <script>
     import { defineComponent } from 'vue'
-    import { Carousel, Pagination, Slide } from 'vue3-carousel'
+    import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel'
 
     import 'vue3-carousel/dist/carousel.css'
 
     export default defineComponent({
         name: 'Autoplay',
+        props:['cardSliderInfo'],
         components: {
             Carousel,
             Slide,
             Pagination,
+            Navigation
         },
+        data(){
+            return{
+
+            }
+        }
     })
 </script>
 <template>
     <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
-        <Slide v-for="slide in 5" :key="slide">
-            <div class="carousel__item">{{ slide }}</div>
+        <Slide v-for="(element, index) in cardSliderInfo" :key="index">
+            <div class="carousel__item">
+                <img :src="`${element.img}`" alt="">
+                <h5>{{ element.title }}</h5>
+                <p>{{ element.text }}</p>
+            </div>
         </Slide>
+        <template #addons>
+            <Pagination />
+            <Navigation />
+        </template>
     </Carousel>
 </template>
 

@@ -4,6 +4,27 @@ export default{
    name:'ThirdMainSection',
    components:{
       Autoplay,
+   },
+   data(){
+      return{
+         arraySlider:[
+            {
+               img:'/images/home-business-service-slide-01-480x298.jpg',
+               title:'Consultative Training',
+               text:'With a coach off belance, affecting your business in various unconsidered ways.',
+            },
+            {
+               img:'/images/home-business-service-slide-02-480x298.jpg',
+               title:'Real Deal Coaching',
+               text:'Brings an exceptionally powerful opportunity. Being able to accept, to work with that opportunity.',
+            },
+            {
+               img:'/images/home-business-service-slide-03-480x298.jpg',
+               title:'Advisor Training Program',
+               text:'Getting high quality, entrepreneur mindset driven online business coaching, is what is needed.',
+            }
+         ]
+      }
    }
 }
 </script>
@@ -16,7 +37,7 @@ export default{
             <h2>Explore How can I help you</h2>
          </div>
          <div class="slider my-3">
-            <Autoplay/>
+            <Autoplay :cardSliderInfo="this.arraySlider"/>
          </div>
       </div>
    </section>

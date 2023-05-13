@@ -48,7 +48,7 @@
                 <span>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new age of digitalization</span>
             </div>
             <div class="row mt-5">
-                <div class="col-4 d-flex justify-content-between mt-3" v-for="(element, index) in this.infos">
+                <div class="col-4 d-flex justify-content-between mt-3" v-for="(element, index) in this.infos" :key="index">
                     <i class="fa-solid" :class="`${ element.icon }`"></i>
                     
                     <div class="infos">
