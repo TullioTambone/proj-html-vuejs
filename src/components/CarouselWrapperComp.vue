@@ -21,15 +21,17 @@
     })
 </script>
 <template>
-    <Carousel :itemsToShow="3.95" :wrapAround="true" :transition="500">
+    <Carousel :itemsToShow="3.40" :wrapAround="true" :transition="500">
         <Slide v-for="(element, index) in cardSliderInfo" :key="index">
             <div class="carousel__item">
                 <img :src="`${element.img}`" alt="">
-                <h5>{{ element.title }}</h5>
-                <p>{{ element.text }}</p>
+                <div class="p-2">
+                    <h5>{{ element.title }}</h5>
+                    <p>{{ element.text }}</p>
+                </div>
             </div>
         </Slide>
-        <template #addons>
+        <template #addons class="m-auto">
             <Pagination />
             <Navigation />
         </template>
@@ -38,6 +40,10 @@
 
 
 <style scoped>
+
+img{
+    width: 100%;
+}
 .carousel__slide {
 padding: 5px;
 }
