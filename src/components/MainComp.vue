@@ -16,25 +16,25 @@ import SecondMainSection from './SecondMainSection.vue';
             <ul>
                 <li>
                     <a href="">
-                        <font-awesome-icon icon="fa-solid fa-ruler-combined"/>
+                        <i class="fa-solid fa-ruler-combined"></i>
                         <span class="active">Pages</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <font-awesome-icon icon="fa-solid fa-globe"/>
+                        <i class="fa-solid fa-globe"></i>
                         <span class="active">Blog</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <font-awesome-icon icon="fa-solid fa-book"/>
+                        <i class="fa-solid fa-book"></i>
                         <span class="active">Courses</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <font-awesome-icon icon="fa-solid fa-cart-shopping"/>
+                        <i class="fa-solid fa-cart-shopping"></i>
                         <span class="active">Shop</span>
                     </a>
                 </li>

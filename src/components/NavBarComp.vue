@@ -31,12 +31,12 @@ import {store} from '../store'
         </div>
         <div class="mid-nav col-6">
             <ul class="">
-                <li><a href="/">Home <font-awesome-icon icon="fa-solid fa-chevron-down" style="width: 10px;"/></a></li>
-                <li><a href="/">Pages <font-awesome-icon icon="fa-solid fa-chevron-down" style="width: 10px;"/></a></li>
-                <li><a href="/">Courses <font-awesome-icon icon="fa-solid fa-chevron-down" style="width: 10px;"/></a></li>
-                <li><a href="/">Features <font-awesome-icon icon="fa-solid fa-chevron-down" style="width: 10px;"/></a></li>
-                <li><a href="/">Blog <font-awesome-icon icon="fa-solid fa-chevron-down" style="width: 10px;"/></a></li>
-                <li><a href="/">Shop <font-awesome-icon icon="fa-solid fa-chevron-down" style="width: 10px;"/></a></li>
+                <li><a href="/">Home <i class="fa-solid fa-chevron-down" style="width: 10px;"></i></a></li>
+                <li><a href="/">Pages <i class="fa-solid fa-chevron-down" style="width: 10px;"></i></a></li>
+                <li><a href="/">Courses <i class="fa-solid fa-chevron-down" style="width: 10px;"></i></a></li>
+                <li><a href="/">Features <i class="fa-solid fa-chevron-down" style="width: 10px;"></i></a></li>
+                <li><a href="/">Blog <i class="fa-solid fa-chevron-down" style="width: 10px;"></i></a></li>
+                <li><a href="/">Shop <i class="fa-solid fa-chevron-down" style="width: 10px;"></i></a></li>
             </ul>
         </div>
         <div class="right-nav col-3">
@@ -47,15 +47,14 @@ import {store} from '../store'
                 <option value="tedesco">GERMAN</option>
             </select>
             <div>
-                <font-awesome-icon icon="fa-regular fa-circle-user"/>
+                <i class="fa-solid fa-user"></i>
             </div>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search..">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                    <font-awesome-icon icon="fa-solid fa-search"/>
+                    <i class="fa-solid fa-search"></i>
                 </button>
             </div>
-            
         </div>
     </div>
 </template>
