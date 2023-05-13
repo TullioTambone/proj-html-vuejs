@@ -11,11 +11,11 @@ import {store} from '../store'
         changeSelect(){
             switch(store.selectValue){
                 case "inglese":
-                    return '../../public/images/en.png'
+                    return '/images/en.png'
                 case "francese":
-                    return '../../public/images/fr.png'
+                    return '/images/fr.png'
                 case "tedesco":
-                    return '../../public/images/de.png'
+                    return '/images/de.png'
             }
         }
     }
