@@ -27,6 +27,11 @@ export default{
 </template>
 
 <style lang="scss">
-@use './style/main.scss' as *;
+@import './style/main.scss';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 </style>

@@ -4,6 +4,7 @@ import SecondMainSection from './SecondMainSection.vue';
 import ThirdMainSection from './ThirdMainSection.vue';
 import FourthMainSection from './FourthMainSection.vue'
 import FifthMainSection from './FifthMainSection.vue';
+import SixthMainSection from './SixthMainSection.vue';
  export default{
     name:'MainComp',
     components:{
@@ -11,13 +12,14 @@ import FifthMainSection from './FifthMainSection.vue';
     SecondMainSection,
     ThirdMainSection,
     FourthMainSection,
-    FifthMainSection
+    FifthMainSection,
+    SixthMainSection
 }
  }
 </script>
 
 <template>
-    <main>
+    <main class="col-12">
         <div id="side-menu">
             <ul>
                 <li>
@@ -52,12 +54,15 @@ import FifthMainSection from './FifthMainSection.vue';
         <ThirdMainSection id="Third"/>
         <FourthMainSection id="Fourth"/>
         <FifthMainSection/>
+        <SixthMainSection/>
     </main>
 </template>
 
 <style lang="scss" scoped>
 @import '../style/main.scss';
+
 main{
+    width: 100%;
     #side-menu{
         background-color: $white;
         z-index: 99999999;
