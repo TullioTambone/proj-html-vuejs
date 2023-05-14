@@ -23,7 +23,7 @@ import {store} from '../store'
 </script>
 
 <template>
-    <div class="container-fluid row">
+    <div class="container-xl row">
         <div class="logo col-3">
             <a href="/">
                 <img style="width: 150px;" src="/images/dark-logo.png" alt="max logo">
@@ -61,7 +61,7 @@ import {store} from '../store'
 
 <style lang="scss" scoped>
 @import '../style/main.scss';
-.container-fluid{
+.container-xl{
     margin: 0;
     padding: 0;
     height: 10vh;

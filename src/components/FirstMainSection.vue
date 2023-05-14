@@ -12,11 +12,11 @@ export default{
 </script>
 
 <template>
-    <section class="">
+    <section class="container-fluid">
         <div class="my-rotate-img">
             <img src="/images/home-business-hero-global-image.png" alt="">
         </div>
-        <ScrollParallax class="first-main-left " speed="0.25">
+        <ScrollParallax class="first-main-left" speed="0.25">
             <h6>New Challenges, New Skills</h6>
             <h2>BUILD YOUR OWN LIFE COACHING BUSINESS</h2>
             <span class="boulder">Whole-Lfife Business Coaching for committed enterpreneurs</span>
@@ -38,10 +38,13 @@ section{
     height: 90vh;
     .my-rotate-img{
         position: absolute;
-        width: 550px;
+        width: 50%;
         left: 50%;
         bottom: null;
         rotate: (-80deg);
+        img{
+            width: 80%;
+        }
     }
     .avatar{
         position: absolute;
@@ -49,13 +52,13 @@ section{
         left: 50%;
         z-index: 0;
         img{
-            width: 400px;
+            width: 80%;
         }
     }   
     .first-main-left{ 
         position: absolute;
-        margin-top: 15em;
-        margin-left: 20em;
+        top: 20%;
+        left: 25%;
         width: 30%;
         height: 50%;
         h6{
@@ -64,7 +67,6 @@ section{
         }
         h2{
             font-weight: 700;
-            font-size: 35px;
             font-family:Arial, Helvetica, sans-serif;
         }
         .boulder{
