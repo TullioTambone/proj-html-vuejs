@@ -1,31 +1,14 @@
 <script>
- export default{
-    name:'FirstMainSection',
+export default{
+name:'FirstMainSection',
 
-    methods:{
-        parallaxScroll(){
-            let avatar = document.querySelector('.avatar')
-            let globe = document.getElementById('my-rotate-img')
-            let text = document.querySelector('.first-main-left')
-
-            let value = window.scrollY
-
-
-            console.log(value)
-
-            window.addEventListener('scroll', function(){
-                avatar.style.bottom = value * 0.5 / 10 + '%'
-                globe.style.bottom = value * 0.5 / 10 +'%'
-                text.style.opacity = 1 - value*0.5 / 100
-
-            })
-        }
-    }
- }
+methods:{
+}
+}
 </script>
 
 <template>
-    <section class="" @mouseover="parallaxScroll()">
+    <section class="">
         <img src="/images/home-business-hero-global-image.png" alt="" id="my-rotate-img">
         <div class="first-main-left">
             <h6>New Challenges, New Skills</h6>

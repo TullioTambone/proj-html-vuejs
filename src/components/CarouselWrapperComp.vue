@@ -29,27 +29,71 @@
                     <h5>{{ element.title }}</h5>
                     <p>{{ element.text }}</p>
                 </div>
+                <div class="btn-section border-top">
+                    <button> Discover now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </Slide>
-        <template #addons class="m-auto">
+        <template #addons class="m-auto mt-3">
             <Pagination />
             <Navigation />
         </template>
     </Carousel>
 </template>
 
+<style lang="scss" scoped>
 
-<style scoped>
+@import '../style/main.scss';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.carousel__pagination{
+    padding-top: 1.5rem;
+    position: relative;
+    z-index: 0;
+    background-color: transparent;
+}
+
+h5{
+    font-weight: 600;
+}
+
+p{
+    font-size: 13px;
+    color: $boulder;
+}
+
+button{
+    color: $giungla;
+    border: none;
+    background: none;
+    font-size: 12px;
+    font-weight: 700;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+}
+.btn-section{
+    @include center;
+}
 
 img{
     width: 100%;
+}
+.carousel__item{
+    background-color: white;
 }
 .carousel__slide {
 padding: 5px;
 }
 
 .carousel__viewport {
-perspective: 2000px;
+    perspective: 2000px;
+    position: relative;
+    z-index: 99;
 }
 
 .carousel__track {
