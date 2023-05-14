@@ -95,7 +95,6 @@
         margin: 50px auto;
         justify-content: center;
         .cards{
-            height: 300px;
             margin: 0 10px;
             padding: 0;
             background-color: black;
