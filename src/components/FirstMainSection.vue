@@ -1,26 +1,31 @@
 <script>
+import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
 export default{
-name:'FirstMainSection',
+    name:'FirstMainSection',
+    components:{
+        ScrollParallax,
+    },
+    methods:{
+    }
+}
 
-methods:{
-}
-}
 </script>
 
 <template>
     <section class="">
-        <img src="/images/home-business-hero-global-image.png" alt="" id="my-rotate-img">
-        <div class="first-main-left">
+        <div class="my-rotate-img">
+            <img src="/images/home-business-hero-global-image.png" alt="">
+        </div>
+        <ScrollParallax class="first-main-left " speed="0.25">
             <h6>New Challenges, New Skills</h6>
             <h2>BUILD YOUR OWN LIFE COACHING BUSINESS</h2>
             <span class="boulder">Whole-Lfife Business Coaching for committed enterpreneurs</span>
             <span class="my-btn mt-3">Get started today</span>
-        </div>
-
-        <div class="avatar">
+        </ScrollParallax>
+        <ScrollParallax class="avatar" direction="x" left="true">
             <img src="/images/home-business-hero-avatar.png" alt="">
-        </div>
-    </section>
+        </ScrollParallax>
+        </section>
 </template>
 
 <style lang="scss" scoped>
@@ -31,9 +36,9 @@ section{
     position: relative;
     display: flex;
     height: 90vh;
-    #my-rotate-img{
+    .my-rotate-img{
         position: absolute;
-        width: 600px;
+        width: 550px;
         left: 50%;
         bottom: null;
         rotate: (-80deg);
@@ -42,14 +47,16 @@ section{
         position: absolute;
         bottom: 0;
         left: 50%;
+        z-index: 0;
         img{
-            width: 450px;
+            width: 400px;
         }
-    }
+    }   
     .first-main-left{ 
-        margin: 10% 0;
+        position: absolute;
+        margin-top: 15em;
         margin-left: 20em;
-        width: 25%;
+        width: 30%;
         height: 50%;
         h6{
             color:$giungla;
@@ -99,7 +106,5 @@ section{
 
         }
     }
-
-        
 }
 </style>

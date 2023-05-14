@@ -1,31 +1,31 @@
 <script>
-    import { defineComponent } from 'vue'
-    import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel'
+import { defineComponent } from 'vue'
+import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel'
 
-    import 'vue3-carousel/dist/carousel.css'
+import 'vue3-carousel/dist/carousel.css'
 
-    export default defineComponent({
-        name: 'Autoplay',
-        props:['cardSliderInfo'],
-        components: {
-            Carousel,
-            Slide,
-            Pagination,
-            Navigation
-        },
-        data(){
-            return{
+export default defineComponent({
+    name: 'Autoplay',
+    props:['cardSliderInfo'],
+    components: {
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation
+    },
+    data(){
+        return{
 
-            }
         }
-    })
+    }
+})
 </script>
 <template>
-    <Carousel :itemsToShow="3.40" :wrapAround="true" :transition="500">
-        <Slide v-for="(element, index) in cardSliderInfo" :key="index">
+    <Carousel :itemsToShow="3.40" :wrapAround="true" :transition="500" :autoplay="4000">
+        <Slide v-for="(element, index) in cardSliderInfo" :key="index" class="mb-5">
             <div class="carousel__item">
                 <img :src="`${element.img}`" alt="">
-                <div class="p-2">
+                <div class="p-3">
                     <h5>{{ element.title }}</h5>
                     <p>{{ element.text }}</p>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </Slide>
-        <template #addons class="m-auto mt-3">
+        <template #addons class="m-auto">
             <Pagination />
             <Navigation />
         </template>
@@ -51,9 +51,7 @@
 }
 .carousel__pagination{
     padding-top: 1.5rem;
-    position: relative;
-    z-index: 0;
-    background-color: transparent;
+    background-color: none;
 }
 
 h5{
@@ -75,6 +73,26 @@ button{
     padding: 1rem;
     position: relative;
     z-index: 2;
+    &:hover{
+        color: white;
+        transition: all 0.6s linear;
+    }
+    &::before{
+        content: '';
+        transition: all 0.3s linear;
+        background-color: $giungla;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-radius: 0 50% 50% 0;
+        z-index: -1;
+    }
+    &:hover::before{
+        width: 100%;
+        border-radius: 0
+    }
 }
 .btn-section{
     @include center;

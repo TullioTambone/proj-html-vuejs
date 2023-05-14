@@ -64,7 +64,6 @@ export default{
          }
       }
       .slider{
-         border: 1px solid red;
          height: 500px;
       }
    }

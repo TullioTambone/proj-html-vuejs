@@ -1,6 +1,7 @@
 <script>
  export default{
     name:'SecondMainSection',
+
     data(){
         return{
             infos: [
@@ -72,6 +73,7 @@ img{
     width: 100%;
 }
 .container-fluid{
+    position: relative;
     height: 100vh;
     @include center;
     #my-container{
