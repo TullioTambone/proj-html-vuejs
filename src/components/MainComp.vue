@@ -19,19 +19,19 @@ import FourthMainSection from './FourthMainSection.vue'
         <div id="side-menu">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="#Second">
                         <i class="fa-solid fa-ruler-combined"></i>
-                        <span class="active">Pages</span>
+                        <span class="active">Get started</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#Third">
                         <i class="fa-solid fa-globe"></i>
-                        <span class="active">Blog</span>
+                        <span class="active">Discover</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#Fourth">
                         <i class="fa-solid fa-book"></i>
                         <span class="active">Courses</span>
                     </a>
@@ -45,10 +45,10 @@ import FourthMainSection from './FourthMainSection.vue'
             </ul>
         </div>
 
-        <FirstMainSection/>
-        <SecondMainSection/>
-        <ThirdMainSection/>
-        <FourthMainSection/>
+        <FirstMainSection id=""/>
+        <SecondMainSection id="Second"/>
+        <ThirdMainSection id="Third"/>
+        <FourthMainSection id="Fourth"/>
     </main>
 </template>
 
