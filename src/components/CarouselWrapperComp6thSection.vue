@@ -16,30 +16,30 @@ export default defineComponent({
 
         cards:[
             {
-                title:'High level of efficiency and scientific teaching methods',
-                commento:'i am free to learn lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque hic culpa totam, voluptatem necessitatibus eius veniam officiis',
-                img:'/images/',
-                nome:'MINA HOLLACE',
-                job:'Freelancer',
-            },
-            {
                 title:'The MaxCoach team work really hard to ensure high quality',
                 commento:'i am free to learn lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque hic culpa totam, voluptatem necessitatibus eius veniam officiis',
-                img:'/images/',
+                img:'/images/testimonial-avata-01.jpg',
                 nome:'LUVIC DUBBLE',
                 job:'Private Tutor',
             },
             {
+                title:'High level of efficiency and scientific teaching methods',
+                commento:'i am free to learn lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque hic culpa totam, voluptatem necessitatibus eius veniam officiis',
+                img:'/images/testimonial-avata-02.jpg',
+                nome:'MINA HOLLACE',
+                job:'Freelancer',
+            },
+            {
                 title:"it's a choice of quality for people with special needs",
                 commento:'i am free to learn lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque hic culpa totam, voluptatem necessitatibus eius veniam officiis',
-                img:'/images/',
+                img:'/images/testimonial-avata-04.jpg',
                 nome:'FLORANCE THEMES',
                 job:'Multimedia Admin',
             },
             {
                 title:'High level of efficiency and scentific teaching methods',
                 commento:'i am free to learn lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque hic culpa totam, voluptatem necessitatibus eius veniam officiis',
-                img:'/images/',
+                img:'/images/testimonial-avata-04.jpg',
                 nome:'MINA HOLLACE',
                 job:'Freelancer',
             },
@@ -54,7 +54,7 @@ export default defineComponent({
         breakpoints: {
 
             300:{
-                itemsToShow: 2,
+                itemsToShow: 1.1,
                 snapAlign: 'center',
             },
             // 700px and up
@@ -72,13 +72,22 @@ export default defineComponent({
 })
 </script>
 <template>
-    <Carousel :itemsToShow="3.3" :wrapAround="true" :transition="500" :autoplay="4000" v-bind="settings" :breakpoints="breakpoints">
-        <Slide v-for="(element, index) in this.cards" :key="index" class="mb-5">
-            <div class="carousel__item p-1">
+    <Carousel :itemsToShow="3.3" :wrapAround="true" :transition="500" v-bind="settings" :breakpoints="breakpoints">
+        <Slide v-for="(element, index) in this.cards" :key="index" class="mb-5 mt-5">
+            <div class="carousel__item text-start">
                 <h6 id="title">{{ element.title }}</h6>
                 <p id="commento">
                     {{ element.commento }}
                 </p>
+                <div class="d-flex align-items-center">
+                    <div id="immagine">
+                        <img :src="`${element.img}`" alt="user" class="rounded-circle image-fluid" style="width: 50px;">
+                    </div>
+                    <div class="ms-2">
+                        <h5 id="nome">{{ element.nome }}</h5>
+                        <h6 id="job">/ {{ element.job }}</h6>
+                    </div>
+                </div>
             </div>
         </Slide>
         <template #addons class="m-auto">
@@ -94,10 +103,18 @@ export default defineComponent({
     margin: 0;
     box-sizing: border-box;
 }
-#title{
-    color: $tuna;
-    font-weight: 600;
 
+#nome{
+    color:$purple;
+    font-size: 15px;
+}
+#job{
+    color: $boulder;
+    font-size: 12px;
+}
+#title{
+    color: $purple;
+    font-weight: 600;
 }
 
 #commento{
@@ -106,10 +123,11 @@ export default defineComponent({
 }
 .carousel__item{
     background-color: white;
+    padding: 3rem;
+    border-radius: 10px;
 }
 
 .carousel__pagination{
-    padding-top: 1.5rem;
     background-color: none;
 }
 
@@ -141,12 +159,12 @@ transform: rotateY(20deg) scale(0.9);
 }
 
 .carousel__slide--prev {
-opacity: 1;
+opacity: 0.5;
 transform: rotateY(-10deg) scale(0.95);
 }
 
 .carousel__slide--next {
-opacity: 1;
+opacity: 0.5;
 transform: rotateY(10deg) scale(0.95);
 }
 

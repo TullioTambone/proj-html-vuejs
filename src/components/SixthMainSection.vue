@@ -79,7 +79,7 @@ import Autoplay from './CarouselWrapperComp6thSection.vue'
 </section>
 
 <section class="container-fluid second-section">
-    <div class="border-container pt-5">
+    <div class="border-container py-5">
         <div class="static-text text-center">
             <h6>People are praising Maxcoach</h6>
             <h2>What make they love us?</h2>
@@ -183,14 +183,14 @@ import Autoplay from './CarouselWrapperComp6thSection.vue'
 
     .border-container{
         .static-text{
-                h6{
-                    color: $giungla;
-                    font-weight: 600;
-                }
-                h2{
-                    font-weight: 700;
-                }
+            h6{
+                color: $giungla;
+                font-weight: 600;
             }
+            h2{
+                font-weight: 700;
+            }
+        }
     }
 }
 </style>
