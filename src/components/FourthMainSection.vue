@@ -49,8 +49,8 @@
             <h6>Let's Dream Bug Together</h6>
             <h2>Explore How can I help you</h2>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-4 col-lg-2 cards"  v-for="(element, index) in arrayCards" :key="index">
+        <div class="row justify-content-between">
+            <div id="cards"  v-for="(element, index) in arrayCards" :key="index">
                 <img :src="`${element.img}`" alt="">
                 <div class="infos">
                     <h6>&dollar; {{ element.price }}</h6>
@@ -73,8 +73,11 @@
 <style lang="scss" scoped>
 @import '../style/main.scss';
 .container-fluid{
-    padding: 5rem 0;
+    padding: 5rem;
+    margin: 0;
     .container{
+        margin: 0;
+        max-width: 100%;
         .static-text{
             width: 50%;
             margin: auto;
@@ -90,59 +93,87 @@
                 }
             }
         }
-    }
-    .row{
-        margin: 50px auto;
-        justify-content: center;
-        .cards{
-            margin: 0 10px;
-            padding: 0;
-            background-color: black;
-            position: relative;
-            img{
-                width: 100%;
-                height: 100%;
-                opacity: 0.8;
-                display: block;
-            }
-
-            .infos{
-                position: absolute;
-                bottom: 0px;
-                padding: 5px;
-                h6{
-                    color: $giungla;
-                    font-weight: 600;
+        .row{
+            margin: 50px auto;
+            justify-content: center;
+            gap: 10px;
+            #cards{
+                flex-basis: calc(100% / 4 - 10px);
+                margin-top: 5px;
+                padding: 0;
+                background-color: black;
+                border-radius: 10px 10px 0 0;
+                position: relative;
+                img{
+                    border-radius: 10px 10px 0 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.8;
+                    display: block;
                 }
-                h5{
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: white;
-                }
-                .active{
-                    color: white;
-                    opacity: 0;
-                    display: none;
-                    p{
-                        font-size: 13px;
+    
+                .infos{
+                    position: absolute;
+                    bottom: 0px;
+                    padding: 5px;
+                    h6{
+                        color: $giungla;
+                        font-weight: 600;
+                    }
+                    h5{
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: white;
+                    }
+                    .active{
+                        color: white;
+                        opacity: 0;
+                        display: none;
+                        p{
+                            font-size: 13px;
+                        }
                     }
                 }
+                &:hover .active{
+                    transition: 0.5s;
+                    transition-delay: 0.2s;
+                    opacity: 100%;
+                    display: block;
+                }
+                
+                &:hover .infos{
+                    transition: 0.3s linear;
+                    bottom: 0;
+                }
+    
+                &:hover img{
+                    transition: 0.3s;
+                    opacity: 0.4;
+                }
             }
-            &:hover .active{
-                transition: 0.5s;
-                transition-delay: 0.2s;
-                opacity: 100%;
-                display: block;
-            }
-            
-            &:hover .infos{
-                transition: 0.3s linear;
-                bottom: 0;
-            }
+        }
+    }
+}
 
-            &:hover img{
-                transition: 0.3s;
-                opacity: 0.4;
+@media screen and (max-width: 767px) {
+    .container-fluid{
+        .container{
+            .row{
+                #cards{
+                    flex-basis: calc(100% / 2 - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container-fluid{
+        .container{
+            .row{
+                #cards{
+                    flex-basis: calc(100%);
+                }
             }
         }
     }

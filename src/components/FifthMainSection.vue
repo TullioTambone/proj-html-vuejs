@@ -5,28 +5,6 @@ import { store } from '../store';
     data(){
         return{
             store,
-            accordios:[
-                {
-                    controlAccordiom: true
-                },
-                {
-                    controlAccordiom: false,
-                },
-                {
-                    controlAccordiom: false,
-                },
-            ]
-        }
-    },
-    methods:{
-        changeAccordion(a){
-            if (a == 'false') {
-                a = false
-                return a
-            } else {
-                a = true
-                return a
-            }
         }
     }
 
@@ -36,8 +14,11 @@ import { store } from '../store';
 <template>
 <section class="container-fluid">
     <div class="row justify-content-center p-5">
-        <div class="col-12 col-md-12 col-lg-6 images p-3">
-            <img src="/images/home-business-video-poster-670x450.jpg" alt="">
+        <div class="col-12 col-md-12 col-lg-6 p-3">
+            <div class="images">
+                <img src="/images/home-business-video-poster-670x450.jpg" alt="">
+                <img src="/images/icon-youtube-play.png" alt="" class="youtube">
+            </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 thrive p-5 ">
             <h2>To Thrive in Business Today, You'll Need a Good Plan</h2>
@@ -45,7 +26,8 @@ import { store } from '../store';
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button @click="changeAccordion(this.accordios[0].controlAccordiom)" :class="(this.accordios[0].controlAccordiom == 'false')?'text-giungla':'text-white'" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa-solid fa-chevron-down me-2"></i>
                             How can we help?
                         </button>
                     </h2>
@@ -59,25 +41,27 @@ import { store } from '../store';
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="fa-solid fa-chevron-down me-2"></i>
                             Why would i need a business COACH?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolorum accusamus, enim ab consequuntur similique nihil ex voluptate aliquam cupiditate voluptatem sit et error, iste vel ut ullam facere exercitationem.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
-                    </button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="fa-solid fa-chevron-down me-2"></i>
+                            Accordion Item #3
+                        </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        
-                    </div>
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolorum accusamus, enim ab consequuntur similique nihil ex voluptate aliquam cupiditate voluptatem sit et error, iste vel ut ullam facere exercitationem.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,9 +72,6 @@ import { store } from '../store';
 
 <style lang="scss" scoped>
 @import '../style/main.scss';
-.text-giungla{
-    color: $giungla;
-}
 .container-fluid{
     background-color: $charade;
     background-image: url(/images/background-map-dots-top-right-transparent.png);
@@ -101,19 +82,19 @@ import { store } from '../store';
     .row{
         background-image: url(/images/maxcoach-shape-07.png);
         background-repeat: no-repeat;
-        background-size: 5%;
+        background-size: 10%;
         background-position: bottom left;
         .images{
             position: relative;
-            img{
-                width: 100%;
-            }
-            &::after{
-                content: url(/images/icon-youtube-play.png);
+            .youtube{
                 position: absolute;
+                width: 50px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+            img{
+                width: 100%;
             }
     
         }
@@ -127,33 +108,36 @@ import { store } from '../store';
                 .accordion-item{
                     background-color: transparent;
                     border: none;
-                    color: white;
                     .accordion-header{
                         .accordion-button{
+                            color: white;
                             background-color: transparent;
                             border: none;
                             
                         
                             &:focus{
                                 box-shadow: none;
+                                color: $giungla;
                             }
+
+                            &:focus i{
+                                rotate: 180deg;
+                                transition: 0.5s;
+                            }
+
                             &::after{
                                 z-index: -99;
                                 position: absolute;
                             }
                         }
                     }
-
-                    #collapseOne{
-                        border: none;
-                        .accordion-body{
-                            border: none;
-                        }
-                    }
                 }
             }
         }
     }
-
+}
+.accordion-body{
+    border: none;
+    color: white;
 }
 </style>

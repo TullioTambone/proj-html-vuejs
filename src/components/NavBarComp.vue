@@ -108,21 +108,16 @@ import {store} from '../store'
 
 <style lang="scss" scoped>
 @import '../style/main.scss';
-.container-fluid{
 
-    background-color: $white;
-    position: relative;
-    z-index: 99;
-    .right-nav{
-        display: flex;
-        align-items: center;
-        select{
-            margin-right: 0.5rem;
-            border: none;
-        }
-    }
+.navbar{
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 1px 30px black;
+    z-index: 999999;
+    left: 0;
+    right: 0;
+    height: 80px;
 }
-
 .offcanvas-body{
     position: relative;
     z-index: 9999999999999;
