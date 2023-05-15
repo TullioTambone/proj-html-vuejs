@@ -2,6 +2,7 @@
 import {store} from './store'
 import NavBarComp from './components/NavBarComp.vue';
 import MainComp from './components/MainComp.vue';
+import Subscribe from './components/SubscribeFooterComp.vue'
 
 export default{
   name: "App",
@@ -13,6 +14,7 @@ export default{
   components: { 
     NavBarComp,
     MainComp,
+    Subscribe,
   }
 }
 </script>
@@ -23,6 +25,9 @@ export default{
   </header>
 
   <MainComp/>
+  <footer>
+    <Subscribe/>
+  </footer>
 
 </template>
 
