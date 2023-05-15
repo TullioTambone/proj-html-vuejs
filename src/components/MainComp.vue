@@ -62,7 +62,10 @@ import SixthMainSection from './SixthMainSection.vue';
 @import '../style/main.scss';
 
 main{
+    max-width: 100%;
     width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
     #side-menu{
         background-color: $white;
         z-index: 99999999;
