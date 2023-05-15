@@ -1,4 +1,5 @@
 <script>
+import 'animate.css';
  export default{
     name:'SecondMainSection',
 
@@ -43,8 +44,8 @@
 
 <template>
     <section class="container-fluid">
-        <div id="my-container" class="text-center mt-">
-            <div class="static-text">
+        <div id="my-container" class="text-center">
+            <div class="static-text animate__animated animate__fadeInUp">
                 <h6>Let's Dream Bug Together</h6>
                 <span>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new age of digitalization</span>
             </div>
@@ -88,6 +89,7 @@ img{
             width: 60%;
             h6{
                 color: $giungla;
+                font-weight: 600;
             }
             span{
                 font-weight: 900;

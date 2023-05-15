@@ -31,8 +31,7 @@ export default{
 <style lang="scss" scoped>
 @import '../../style/main.scss';
 section{
-    width: 100%;
-    max-width: 100%;
+    margin-top: 80px;
     background-color: $mywhite;
     position: relative;
     display: flex;
@@ -40,11 +39,11 @@ section{
     .my-rotate-img{
         position: absolute;
         width: 50%;
-        left: 50%;
+        left: 45%;
         bottom: null;
-        rotate: (-80deg);
+        animation: rotateAnimation 10s infinite linear;
         img{
-            width: 80%;
+            width: 78%;
         }
     }
     .avatar{
@@ -111,6 +110,14 @@ section{
     }
 }
 
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+}
+}
 @media screen and (max-width: 767px) {
     section{
         height: 500px;
