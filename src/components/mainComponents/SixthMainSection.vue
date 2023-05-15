@@ -1,5 +1,5 @@
 <script>
-import Autoplay from './CarouselWrapperComp6thSection.vue'
+import Autoplay from '../CarouselWrapperComp6thSection.vue'
  export default{
     name:'SixthMAinSection',
     components:{
@@ -93,7 +93,7 @@ import Autoplay from './CarouselWrapperComp6thSection.vue'
 </template>
 
 <style lang="scss" scoped>
-@import '../style/main.scss';
+@import '../../style/main.scss';
 
 .first-section{
     background-color: $mywhite;

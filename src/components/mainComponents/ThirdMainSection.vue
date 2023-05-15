@@ -1,5 +1,5 @@
 <script>
-import Autoplay from './CarouselWrapperComp.vue'
+import Autoplay from '../CarouselWrapperComp.vue'
 export default{
    name:'ThirdMainSection',
    components:{
@@ -45,7 +45,7 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-@import '../style/main.scss';
+@import '../../style/main.scss';
 .container-fluid{
    padding: 4rem 1rem;
    background-color: $mywhite;

@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+import { store } from '../../store';
  export default{
     name:'FifthMainSection',
     data(){
@@ -71,7 +71,7 @@ import { store } from '../store';
 </template>
 
 <style lang="scss" scoped>
-@import '../style/main.scss';
+@import '../../style/main.scss';
 .container-fluid{
     background-color: $charade;
     background-image: url(/images/background-map-dots-top-right-transparent.png);

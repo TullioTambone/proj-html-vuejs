@@ -68,7 +68,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../style/main.scss' as*;
+@import '../../style/main.scss';
 
 img{
     width: 100%;

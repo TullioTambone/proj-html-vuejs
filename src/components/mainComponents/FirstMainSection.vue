@@ -29,7 +29,7 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-@import '../style/main.scss';
+@import '../../style/main.scss';
 section{
     width: 100%;
     max-width: 100%;

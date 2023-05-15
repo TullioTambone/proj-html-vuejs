@@ -71,7 +71,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../style/main.scss';
+@import '../../style/main.scss';
 .container-fluid{
     padding: 5rem;
     margin: 0;

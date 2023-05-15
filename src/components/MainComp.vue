@@ -1,10 +1,10 @@
 <script>
-import FirstMainSection from './FirstMainSection.vue'
-import SecondMainSection from './SecondMainSection.vue';
-import ThirdMainSection from './ThirdMainSection.vue';
-import FourthMainSection from './FourthMainSection.vue'
-import FifthMainSection from './FifthMainSection.vue';
-import SixthMainSection from './SixthMainSection.vue';
+import FirstMainSection from './mainComponents/FirstMainSection.vue'
+import SecondMainSection from './mainComponents/SecondMainSection.vue';
+import ThirdMainSection from './mainComponents/ThirdMainSection.vue';
+import FourthMainSection from './mainComponents/FourthMainSection.vue'
+import FifthMainSection from './mainComponents/FifthMainSection.vue';
+import SixthMainSection from './mainComponents/SixthMainSection.vue';
  export default{
     name:'MainComp',
     components:{
