@@ -20,7 +20,7 @@ export default{
             <h6>New Challenges, New Skills</h6>
             <h2>BUILD YOUR OWN LIFE COACHING BUSINESS</h2>
             <span class="boulder">Whole-Lfife Business Coaching for committed enterpreneurs</span>
-            <span class="my-btn mt-3">Get started today</span>
+            <span class="my-btn mt-1">Get started today</span>
         </ScrollParallax>
         <ScrollParallax class="avatar" direction="x" left="true">
             <img src="/images/home-business-hero-avatar.png" alt="">
@@ -32,6 +32,7 @@ export default{
 @import '../style/main.scss';
 section{
     width: 100%;
+    max-width: 100%;
     background-color: $mywhite;
     position: relative;
     display: flex;
@@ -107,6 +108,47 @@ section{
             }
 
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section{
+        height: 500px;
+        .first-main-left{
+            top: 10%;
+            h2{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    section{
+        height: 300px;
+        .avatar{
+            img{
+                width: 100%;
+            }
+        }
+
+        .first-main-left{
+            width: 40%;
+            left: 10%;
+            top: 2%;
+            h2{
+                font-size: 15px;
+            }
+            .boulder{
+                font-size: 12px;
+            }
+            .my-btn{
+                width: 100px;
+                padding: 5px 12px;
+                font-size: 10px;
+            }
+        }
+
     }
 }
 </style>

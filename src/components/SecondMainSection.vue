@@ -32,7 +32,7 @@
                 },
                 {
                     icon: 'fa-person-rays',
-                    title: 'Self Development',
+                    title: 'Self Develop',
                     paragrafh: "Business Coaching often keep your focus and develope you both in a professional and personal way."
                 }
             ]
@@ -49,18 +49,19 @@
                 <span>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new age of digitalization</span>
             </div>
             <div class="row mt-5">
-                <div class="col-4 d-flex justify-content-between mt-3" v-for="(element, index) in this.infos" :key="index">
-                    <i class="fa-solid" :class="`${ element.icon }`"></i>
-                    
+                <div class="col-12 col-md-6 col-lg-4 mt-3" v-for="(element, index) in this.infos" :key="index">
                     <div class="infos">
-                        <h5>{{ element.title }}</h5>
+                        <div class="d-flex aling-items-center justify-content-center">
+                            <i class="fa-solid fs-3 me-2" :class="`${ element.icon }`"></i>
+                            <h5>{{ element.title }}</h5>
+                        </div>
                         <p>{{ element.paragrafh }}</p>
                     </div>
                 </div>
             </div>
-            <div class="buttons mt-3">
-                <button class="btn-left me-3">Learn more</button>
-                <button class="btn-right ms-3">Get started today</button>
+            <div class="buttons row justify-content-center">
+                <button class="btn-left col-12 col-md-6 col-lg-6 mt-3 ms-1">Learn more</button>
+                <button class="btn-right col-12 col-md-6 col-lg-6 mt-3 ms-1">Get started today</button>
             </div>
         </div>
     </section>
@@ -73,8 +74,7 @@ img{
     width: 100%;
 }
 .container-fluid{
-    position: relative;
-    height: 100vh;
+    padding: 4rem 1rem;
     @include center;
     #my-container{
         margin: auto;
@@ -99,16 +99,9 @@ img{
             margin: 0 auto;
             width: 80%;
             .col-4{
-
-                i{
-                    font-size: 30px;
-                }
                 .infos{
                     text-align: left;
                     margin-left: 1rem;
-                    h6{
-    
-                    }
                     p{
                         font-size: 13px;
                         color: $boulder;
