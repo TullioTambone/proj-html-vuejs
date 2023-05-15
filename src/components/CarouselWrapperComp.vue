@@ -13,15 +13,36 @@ export default defineComponent({
         Pagination,
         Navigation
     },
-    data(){
-        return{
+    data: () => ({
+    // carousel settings
+    settings: {
+      itemsToShow: 1,
+      snapAlign: 'center',
+    },
+    // breakpoints are mobile first
+    // any settings not specified will fallback to the carousel settings
+    breakpoints: {
 
-        }
-    }
+        300:{
+            itemsToShow: 1,
+            snapAlign: 'center',
+        },
+        // 700px and up
+        700: {
+            itemsToShow: 2,
+            snapAlign: 'center',
+        },
+        // 1024 and up
+        1024: {
+            itemsToShow: 3.55,
+            snapAlign: 'center',
+        },
+    },
+  }),
 })
 </script>
 <template>
-    <Carousel :itemsToShow="3.40" :wrapAround="true" :transition="500" :autoplay="4000">
+    <Carousel :itemsToShow="3.3" :wrapAround="true" :transition="500" :autoplay="4000" v-bind="settings" :breakpoints="breakpoints">
         <Slide v-for="(element, index) in cardSliderInfo" :key="index" class="mb-5">
             <div class="carousel__item">
                 <img :src="`${element.img}`" alt="">

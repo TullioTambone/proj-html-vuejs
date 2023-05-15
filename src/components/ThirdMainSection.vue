@@ -4,6 +4,7 @@ export default{
    name:'ThirdMainSection',
    components:{
       Autoplay,
+
    },
    data(){
       return{
@@ -46,7 +47,7 @@ export default{
 <style lang="scss" scoped>
 @import '../style/main.scss';
 .container-fluid{
-   height: 100vh;
+   padding: 4rem 1rem;
    background-color: $mywhite;
    @include center;
    #my-container{

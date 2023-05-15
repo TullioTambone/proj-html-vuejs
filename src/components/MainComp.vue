@@ -19,40 +19,36 @@ import SixthMainSection from './SixthMainSection.vue';
 </script>
 
 <template>
-    <main class="col-12">
+    <main>
         <div id="side-menu">
             <ul>
                 <li>
-                    <a href="#Second">
+                    <a>
                         <i class="fa-solid fa-ruler-combined"></i>
-                        <span class="active">Get started</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#Third">
+                    <a>
                         <i class="fa-solid fa-globe"></i>
-                        <span class="active">Discover</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#Fourth">
+                    <a>
                         <i class="fa-solid fa-book"></i>
-                        <span class="active">Courses</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a>
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="active">Shop</span>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <FirstMainSection id=""/>
-        <SecondMainSection id="Second"/>
-        <ThirdMainSection id="Third"/>
-        <FourthMainSection id="Fourth"/>
+        <FirstMainSection/>
+        <SecondMainSection/>
+        <ThirdMainSection/>
+        <FourthMainSection/>
         <FifthMainSection/>
         <SixthMainSection/>
     </main>
@@ -65,10 +61,9 @@ main{
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
     #side-menu{
         background-color: $white;
-        z-index: 99999999;
+        z-index: 999;
         position: fixed;
         top: 5rem;
         right: 0px;
@@ -84,23 +79,8 @@ main{
             li{
                 width: 100%;
                 margin: 0.5rem 0;
-                a{
-                    display: flex;
-                    justify-content: flex-start;
-                    
-                    color: $charade;
-                    .active{
-                        display: none;
-                    }
-                }
             }
         }
-
-        &:hover .active{
-            display: inline-block;
-            margin-left: 5px;
-        }
-
     }
 }
 
