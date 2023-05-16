@@ -5,24 +5,48 @@ export default{
     components:{
         ScrollParallax,
     },
-    methods:{
+    mounted() {
+        const container = this.$refs.parallaxContainer;
+
+        container.addEventListener('mousemove', this.handleMouseMove);
+    },
+    beforeUnmount() {
+        const container = this.$refs.parallaxContainer;
+        container.removeEventListener('mousemove', this.handleMouseMove);
+    },
+    methods: {
+        handleMouseMove(event) {
+            const containerRect = this.$refs.parallaxContainer.getBoundingClientRect();
+            const mouseX = event.clientX - containerRect.left;
+            const mouseY = event.clientY - containerRect.top;
+
+            const layers = document.querySelectorAll('.layer');
+
+            layers.forEach(layer => {
+            const speed = parseFloat(layer.getAttribute('data-speed'));
+            const x = (mouseX - containerRect.width / 2) * speed / 100;
+            const y = (mouseY - containerRect.height / 2) * speed / 100;
+
+            layer.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        }
     }
 }
 
 </script>
 
 <template>
-    <section class="container-fluid">
+    <section class="container-fluid" ref="parallaxContainer">
         <div class="my-rotate-img">
             <img src="/images/home-business-hero-global-image.png" alt="">
         </div>
-        <ScrollParallax class="first-main-left" speed="0.25">
+        <ScrollParallax class="first-main-left layer" speed="0.25" data-speed="6">
             <h6>New Challenges, New Skills</h6>
             <h2>BUILD YOUR OWN LIFE COACHING BUSINESS</h2>
             <span class="boulder">Whole-Lfife Business Coaching for committed enterpreneurs</span>
             <span class="my-btn mt-1">Get started today</span>
         </ScrollParallax>
-        <ScrollParallax class="avatar" direction="x" left="true">
+        <ScrollParallax class="avatar layer" direction="x" left="true" data-speed="-4">
             <img src="/images/home-business-hero-avatar.png" alt="">
         </ScrollParallax>
         </section>

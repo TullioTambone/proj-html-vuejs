@@ -26,25 +26,7 @@ export default{
             }
          ]
       }
-   },
-   mounted(){
-      document.documentElement.style.setProperty('--animate-duration', '1.5s');
-
-      const observer = new IntersectionObserver(entries => {
-         entries.forEach(entry => {
-               if (entry.isIntersecting) {
-               // Aggiungi la classe animate__fadeIn quando l'elemento diventa visibile
-               entry.target.classList.add('animate__fadeInUp');
-         
-               observer.unobserve(entry.target);
-               }
-         });
-      });
-      const elements = document.querySelectorAll('.animate_animated');
-      elements.forEach(element => {
-         observer.observe(element);
-      });
-   },
+   }
 }
 </script>
 

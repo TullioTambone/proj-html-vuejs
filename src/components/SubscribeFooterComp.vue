@@ -1,15 +1,41 @@
 <script>
- export default{
-    name:'Subscribe'
- }
+export default{
+    name:'Subscribe',
+
+    mounted() {
+        const container = this.$refs.parallaxContainer;
+        container.addEventListener('mousemove', this.handleMouseMove);
+    },
+    beforeUnmount() {
+        const container = this.$refs.parallaxContainer;
+        container.removeEventListener('mousemove', this.handleMouseMove);
+    },
+    methods: {
+        handleMouseMove(event) {
+            const containerRect = this.$refs.parallaxContainer.getBoundingClientRect();
+            const mouseX = event.clientX - containerRect.left;
+            const mouseY = event.clientY - containerRect.top;
+
+            const layers = document.querySelectorAll('.layer');
+
+            layers.forEach(layer => {
+            const speed = parseFloat(layer.getAttribute('data-speed'));
+            const x = (mouseX - containerRect.width / 2) * speed / 100;
+            const y = (mouseY - containerRect.height / 2) * speed / 100;
+
+            layer.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        }
+    }
+}
 </script>
 
 <template>
-<section class="container-fluid">
+<section class="container-fluid" ref="parallaxContainer">
     <div id="my-container" class="text-center">
-        <img src="/images/maxcoach-shape-02.png" alt="" id="image-2">
-        <img src="/images/maxcoach-shape-09.png" alt="" id="image-3">
-        <div id="image-1"></div>
+        <img src="/images/maxcoach-shape-02.png" alt="" id="image-2" data-speed="-7" class="layer">
+        <img src="/images/maxcoach-shape-09.png" alt="" id="image-3" data-speed="5" class="layer">
+        <div id="image-1" data-speed="9" class="layer"></div>
         <div class="static-text d-flex flex-column justify-content-center align-items-center">
             <div class="title">
                 <span class="normal">Subscribe</span><span class="giungla ms-1">Newsletters</span>
@@ -17,7 +43,7 @@
             <div class="email-subj col-12 col-md-5 col-lg-5">
                 <span>Enter your email address to register to our newsletter subscription delivered on a regular basis!</span>
             </div>
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center col-12">
                 <input name="email" type="email" placeholder="Enter your email" autocomplete="on">
                 <button type="submit">Subscribe</button>
             </div>

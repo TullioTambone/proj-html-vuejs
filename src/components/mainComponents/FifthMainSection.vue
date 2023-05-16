@@ -6,18 +6,47 @@ import { store } from '../../store';
         return{
             store,
         }
+    },
+    mounted() {
+        const container = this.$refs.parallaxContainer;
+
+        container.addEventListener('mousemove', this.handleMouseMove);
+    },
+    beforeUnmount() {
+        const container = this.$refs.parallaxContainer;
+        container.removeEventListener('mousemove', this.handleMouseMove);
+    },
+    methods: {
+        handleMouseMove(event) {
+            const containerRect = this.$refs.parallaxContainer.getBoundingClientRect();
+            const mouseX = event.clientX - containerRect.left;
+            const mouseY = event.clientY - containerRect.top;
+
+            const layers = document.querySelectorAll('.layer');
+
+            layers.forEach(layer => {
+            const speed = parseFloat(layer.getAttribute('data-speed'));
+            const x = (mouseX - containerRect.width / 2) * speed / 100;
+            const y = (mouseY - containerRect.height / 2) * speed / 100;
+
+            layer.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        }
     }
 
  }
 </script>
 
 <template>
-<section class="container-fluid">
+<section class="container-fluid" ref="parallaxContainer">
+    <div>
+        <img src="/images/maxcoach-shape-07.png" alt="" class="layer" data-speed="7" id="dots">
+    </div>
     <div class="row justify-content-center p-5">
         <div class="col-12 col-md-12 col-lg-6 p-3">
             <div class="images">
-                <img src="/images/home-business-video-poster-670x450.jpg" alt="">
-                <img src="/images/icon-youtube-play.png" alt="" class="youtube">
+                <img src="/images/home-business-video-poster-670x450.jpg" alt="" class="layer" data-speed="-5">
+                <img src="/images/icon-youtube-play.png" alt="" class="youtube layer" data-speed="-5">
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 thrive p-5 ">
@@ -78,12 +107,12 @@ import { store } from '../../store';
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 60%;
-
+    position:relative;
+    #dots{
+        position: absolute;
+        bottom:10%;
+    }
     .row{
-        background-image: url(/images/maxcoach-shape-07.png);
-        background-repeat: no-repeat;
-        background-size: 10%;
-        background-position: bottom left;
         .images{
             position: relative;
             .youtube{

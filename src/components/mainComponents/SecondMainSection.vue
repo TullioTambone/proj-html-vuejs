@@ -36,26 +36,9 @@ import 'animate.css';
                     title: 'Self Develop',
                     paragrafh: "Business Coaching often keep your focus and develope you both in a professional and personal way."
                 }
-            ]
+            ],
+            observer: null
         }
-    },
-    mounted(){
-        document.documentElement.style.setProperty('--animate-duration', '1.5s');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                // Aggiungi la classe animate__fadeIn quando l'elemento diventa visibile
-                entry.target.classList.add('animate__fadeInUp');
-            
-                observer.unobserve(entry.target);
-                }
-            });
-        });
-        const elements = document.querySelectorAll('.animate_animated');
-        elements.forEach(element => {
-            observer.observe(element);
-        });
     },
 }
 </script>
@@ -68,7 +51,7 @@ import 'animate.css';
                 <span>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new age of digitalization</span>
             </div>
             <div class="row mt-5">
-                <div class="`col-12 col-md-6 col-lg-4 mt-3 animate__animated animate__fadeInUp" v-for="(element, index) in this.infos" :key="index" :class="`animate__delay-${index / 2 + 0.5}s`">
+                <div :ref="`infoElement-${index}`" class="col-12 col-md-6 col-lg-4 mt-3 animate__animated animate__fadeInUp" v-for="(element, index) in this.infos" :key="index" :class="`animate__delay-${index / 2 + 0.5}s`">
                     <div class="infos">
                         <div class="d-flex aling-items-center justify-content-center">
                             <i class="fa-solid fs-3 me-2" :class="`${ element.icon }`"></i>
