@@ -53,13 +53,13 @@ import Autoplay from '../CarouselWrapperComp6thSection.vue'
 <template>
 <section class="container-fluid first-section">
     <div class="border-container pt-5 d-flex flex-column align-items-center">
-        <div class="static-text text-center animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="static-text text-center animate__animated animate__fadeInUp col-12">
             <h6>Wanna transform your life?</h6>
             <h2 class="mt-3">Upcoming Events</h2>
         </div>
 
         <div class="row mt-5">
-            <div class="my-card d-flex justify-content-between animate__animated animate__delay-4s" v-for="(element, index) in arrayEvents" :class="(index % 2 == 0)? 'animate__fadeInLeft' : 'animate__fadeInRight'">
+            <div class="my-card d-flex justify-content-between animate__animated" v-for="(element, index) in arrayEvents" :class="(index % 2 == 0)? 'animate__fadeInLeft' : 'animate__fadeInRight'">
                 <div class="w-75">
                     <span class="luogo">
                         <i class="fa-solid fa-location-dot"></i>
@@ -80,7 +80,7 @@ import Autoplay from '../CarouselWrapperComp6thSection.vue'
 
 <section class="container-fluid second-section">
     <div class="border-container py-5">
-        <div class="static-text text-center">
+        <div class="static-text text-center col-12">
             <h6>People are praising Maxcoach</h6>
             <h2>What make they love us?</h2>
         </div>

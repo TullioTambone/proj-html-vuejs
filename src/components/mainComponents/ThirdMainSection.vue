@@ -33,7 +33,7 @@ export default{
 <template>
    <section class="container-fluid">
       <div id="my-container" class="text-center">
-         <div class="static-text animate__animated animate__fadeInUp animation__delay-2s">
+         <div class="static-text animate__animated animate__fadeInUp col-12">
             <h6>Let's Dream Bug Together</h6>
             <h2>Explore How can I help you</h2>
          </div>

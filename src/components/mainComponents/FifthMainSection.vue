@@ -49,10 +49,10 @@ import { store } from '../../store';
                 <img src="/images/icon-youtube-play.png" alt="" class="youtube layer" data-speed="-5">
             </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-6 thrive p-5 ">
+        <div class="col-12 col-md-12 col-lg-6 thrive">
             <h2>To Thrive in Business Today, You'll Need a Good Plan</h2>
 
-            <div class="accordion" id="accordionExample">
+            <div class="accordion col-12" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

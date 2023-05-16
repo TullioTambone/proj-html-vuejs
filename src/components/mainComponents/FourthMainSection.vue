@@ -38,37 +38,19 @@
                 },
             ]
         }
-    },
-    mounted(){
-        //document.documentElement.style.setProperty('--animate-duration', '1.5s');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                // Aggiungi la classe animate__fadeIn quando l'elemento diventa visibile
-                entry.target.classList.add('animate__fadeInUp');
-            
-                observer.unobserve(entry.target);
-                }
-            });
-        });
-        const elements = document.querySelectorAll('.animate_animated');
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    },
- }
+    }
+}
 </script>
 
 <template>
 <section class="container-fluid">
     <div class="container">
-        <div class="static-text text-center animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="static-text text-center animate__animated animate__fadeInUp col-12">
             <h6>Let's Dream Bug Together</h6>
             <h2>Explore How can I help you</h2>
         </div>
         <div class="row justify-content-between">
-            <div id="cards"  v-for="(element, index) in arrayCards" :key="index" class="animate__animated animate__delay-3s" :class="(index <= 1) ? 'animate__backInLeft' : 'animate__backInRight'">
+            <div id="cards"  v-for="(element, index) in arrayCards" :key="index" class="animate__animated" :class="(index <= 1) ? 'animate__backInLeft' : 'animate__backInRight'">
                 <img :src="`${element.img}`" alt="">
                 <div class="infos">
                     <h6>&dollar; {{ element.price }}</h6>

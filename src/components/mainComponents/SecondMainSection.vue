@@ -46,7 +46,7 @@ import 'animate.css';
 <template>
     <section class="container-fluid">
         <div id="my-container" class="text-center">
-            <div class="static-text animate__animated animate__fadeInUp">
+            <div class="static-text animate__animated animate__fadeInUp col-12">
                 <h6>Let's Dream Bug Together</h6>
                 <span>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new age of digitalization</span>
             </div>
