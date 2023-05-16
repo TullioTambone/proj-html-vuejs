@@ -86,7 +86,7 @@ section{
             overflow: hidden;
             transition: 0.8s ease;
             z-index: 1;
-            
+            cursor: pointer;
             &:hover{
                 color: white;
             }

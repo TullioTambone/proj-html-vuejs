@@ -8,13 +8,13 @@ import SixthMainSection from './mainComponents/SixthMainSection.vue';
  export default{
     name:'MainComp',
     components:{
-    FirstMainSection,
-    SecondMainSection,
-    ThirdMainSection,
-    FourthMainSection,
-    FifthMainSection,
-    SixthMainSection
-    }
+        FirstMainSection,
+        SecondMainSection,
+        ThirdMainSection,
+        FourthMainSection,
+        FifthMainSection,
+        SixthMainSection
+    },
 }
 </script>
 
@@ -27,17 +27,17 @@ import SixthMainSection from './mainComponents/SixthMainSection.vue';
                     <i class="fa-solid fa-ruler-combined"></i>
                 </a>
             </li>
-            <li>
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
                 <a>
                     <i class="fa-solid fa-globe"></i>
                 </a>
             </li>
-            <li>
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
                 <a>
                     <i class="fa-solid fa-book"></i>
                 </a>
             </li>
-            <li>
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
                 <a>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>

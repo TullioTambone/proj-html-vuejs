@@ -46,20 +46,38 @@ import Autoplay from '../CarouselWrapperComp6thSection.vue'
                 },
             ]
         }
-    }
+    },
+    mounted(){
+        // document.documentElement.style.setProperty('--animate-duration', '1.5s');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                // Aggiungi la classe animate__fadeIn quando l'elemento diventa visibile
+                entry.target.classList.add('animate__fadeInUp');
+            
+                observer.unobserve(entry.target);
+                }
+            });
+        });
+        const elements = document.querySelectorAll('.animate_animated');
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    },
  }
 </script>
 
 <template>
 <section class="container-fluid first-section">
-    <div class="border-container pt-5 d-flex flex-column  align-items-center">
-        <div class="static-text text-center">
+    <div class="border-container pt-5 d-flex flex-column align-items-center">
+        <div class="static-text text-center animate__animated animate__fadeInUp animate__delay-2s">
             <h6>Wanna transform your life?</h6>
             <h2 class="mt-3">Upcoming Events</h2>
         </div>
 
         <div class="row mt-5">
-            <div class="my-card d-flex justify-content-between" v-for="(element, index) in arrayEvents">
+            <div class="my-card d-flex justify-content-between animate__animated animate__delay-4s" v-for="(element, index) in arrayEvents" :class="(index % 2 == 0)? 'animate__fadeInLeft' : 'animate__fadeInRight'">
                 <div class="w-75">
                     <span class="luogo">
                         <i class="fa-solid fa-location-dot"></i>

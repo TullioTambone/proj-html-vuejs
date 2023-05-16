@@ -26,14 +26,32 @@ export default{
             }
          ]
       }
-   }
+   },
+   mounted(){
+      document.documentElement.style.setProperty('--animate-duration', '1.5s');
+
+      const observer = new IntersectionObserver(entries => {
+         entries.forEach(entry => {
+               if (entry.isIntersecting) {
+               // Aggiungi la classe animate__fadeIn quando l'elemento diventa visibile
+               entry.target.classList.add('animate__fadeInUp');
+         
+               observer.unobserve(entry.target);
+               }
+         });
+      });
+      const elements = document.querySelectorAll('.animate_animated');
+      elements.forEach(element => {
+         observer.observe(element);
+      });
+   },
 }
 </script>
 
 <template>
    <section class="container-fluid">
       <div id="my-container" class="text-center">
-         <div class="static-text">
+         <div class="static-text animate__animated animate__fadeInUp animation__delay-2s">
             <h6>Let's Dream Bug Together</h6>
             <h2>Explore How can I help you</h2>
          </div>
