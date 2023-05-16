@@ -79,14 +79,13 @@ img{
     padding: 4rem 1rem;
     @include center;
     #my-container{
-        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 80%;
         .static-text{
-            margin: 0 auto;
+
             width: 60%;
             h6{
                 color: $giungla;

@@ -28,7 +28,7 @@ export default{
 
   <MainComp/>
   <footer>
-    <a id="go-up" href="#head">&UpArrow;</a>
+    <a id="go-up" href="#head" class="animate__animated animate__bounce animate__infinite animate__slow">&UpArrow;</a>
     <Subscribe/>
     <Copy/>
   </footer>
